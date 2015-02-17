@@ -11,7 +11,11 @@
 #import <UIKit/UIKit.h>
 
 @interface Requester : NSObject<NSURLConnectionDelegate>
--(void) setHandler:(void(^)(UIBackgroundFetchResult result))handler;
+@property (nonatomic, readwrite, assign) UIBackgroundTaskIdentifier taskToken;
+-(void) setBackgroundFetchHandler:(void(^)(UIBackgroundFetchResult result))handler;
 -(void) sendRequest;
+
+-(void) sendRequestWithTaskIdentifier:(UIBackgroundTaskIdentifier) taskToken;
+
 +(instancetype) sharedInstance;
 @end
