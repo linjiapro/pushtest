@@ -41,7 +41,7 @@
   
   
   if([userdefault floatForKey:@"total data downloaded"]){
-    self.totalDataDownloaded.text = [NSString stringWithFormat:@"total data download:%f", [userdefault floatForKey:@"total data downloaded"]];
+    self.totalDataDownloaded.text = [NSString stringWithFormat:@"total data download:%f M", [userdefault floatForKey:@"total data downloaded"]/1024.0/1024.0];
   } else {
     self.totalDataDownloaded.text = [NSString stringWithFormat:@"%f", 0.0];
   }

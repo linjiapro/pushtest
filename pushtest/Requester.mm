@@ -58,7 +58,7 @@
   [userDefaults synchronize];
   
   _responseData = [[NSMutableData alloc] init];
-  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://upload.wikimedia.org/wikipedia/commons/b/bc/Cape_Cod_Landsat_7.jpg"]];
+  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://upload.wikimedia.org/wikipedia/commons/2/2f/Cape_Cod_-_Landsat_7.jpg"]];
   [request setAllowsCellularAccess:YES];
   [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
   NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
